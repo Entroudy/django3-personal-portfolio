@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = ')=7#vyt!oh2h#=n&@beohd#xt93#&91bgbg$b*97d-csodhtyq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -127,4 +127,7 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = BASE_DIR / 'media'
 
-
+try:
+    from .local_settings import *
+except ImportError:
+    print("Looks like no local file. You must be on production")
