@@ -12,3 +12,9 @@ cd workon
 workon
 workon portfoliovenv
 exit
+git status
+git add .
+git commit -m "Website commit"
+git push origin
+workon
+exit
